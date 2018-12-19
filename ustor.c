@@ -204,7 +204,7 @@ int has_idfa(const uint64_t idfa) //Pub
     }
 
     //Set the ranges
-    char idfar = (idfa % sizeof(short))+1;
+    short idfar = (idfa % (sizeof(short)-1))+1;
     if(idfar >= sites[site_index].idfa_low && idfar <= sites[site_index].idfa_high)
     {
         rejected++;
@@ -240,7 +240,7 @@ void add_idfa(const uint64_t idfa, const uint expire_seconds) //Pub
         collisions++;
 
     //Set the ranges
-    char idfar = (idfa % sizeof(short))+1;
+    short idfar = (idfa % (sizeof(short)-1))+1;
     if(idfar < sites[site_index].idfa_low || sites[site_index].idfa_low == 0)
     {
         sites[site_index].idfa_low = idfar;
