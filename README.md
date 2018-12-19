@@ -32,7 +32,7 @@ a total size of 8 bytes.
 The current configuration uses ~3.2 GB of memory.
 
 
-PHP Functions for Write and Check operations
+##### PHP Functions for Write and Check operations
 
 ```
 function add_ustor($idfa, $expire_seconds)
