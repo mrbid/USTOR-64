@@ -9,7 +9,7 @@ Performance; READ O(1) - WRITE O(1) prime number hash map using CRC64.
 This version of USTOR uses the UDP protocol for maximum QPS, a hash map
 using a prime number, a simple bucketing system that is adequate enough
 for the purpose of dealing with hash collisions in the application of
-unique filtering and as usual cache efficient pre-allocated memory.
+unique filtering and, as expected, cache efficient pre-allocated memory.
 
 POSIX Threads are used to thread the Read operations, on a separate
 port with port sharing enabled. (port 7811)
@@ -22,8 +22,8 @@ algorithm from Redis. Then it is added to the hashmap.
 
 By default 433,033,301 (433 Million) impressions can be recorded
 not including collisions, which from studying the code you will find
-are range blocked using two short integers to make the whole struct
-a total size of 8 bytes.
+collisions are range blocked using two short integers to make the whole
+struct a total size of 8 bytes.
 
 The current configuration uses ~3.2 GB of memory.
 
