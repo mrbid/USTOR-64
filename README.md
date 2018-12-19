@@ -4,10 +4,6 @@
 
 *Term: IDFA - a unique user id*
 
-PHP Function Reference:
-add_ustor(idfa, expirary_in_seconds);
-check_ustor(idfa); (TRUE = Has IDFA, FALSE = Does not have IDFA)
-
 Performance; READ O(1) - WRITE O(1) prime number hash map using CRC64.
 
 This version of USTOR uses the UDP protocol for maximum QPS, a hash map
