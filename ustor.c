@@ -365,10 +365,10 @@ void *readThread(void *arg)
         time_t st = time(0);
         time_t tt = time(0);
         int read_size;
+        char client_buff[RECV_BUFF_SIZE];
         while(1)
         {
             //Client Command
-            char client_buff[RECV_BUFF_SIZE];
             memset(client_buff, '\0', sizeof(client_buff));
             read_size = recvfrom(s, client_buff, RECV_BUFF_SIZE-1, 0, (struct sockaddr *)&client, &slen);
             //printf("%s\n", client_buff);
@@ -495,10 +495,12 @@ int main(int argc , char *argv[])
         time_t st = time(0);
         tt = time(0);
         int read_size;
+        char client_buff[RECV_BUFF_SIZE];
+        char pidfa[RECV_BUFF_SIZE];
+        char pexpire[RECV_BUFF_SIZE];
         while(1)
         {
             //Client Command
-            char client_buff[RECV_BUFF_SIZE];
             memset(client_buff, '\0', sizeof(client_buff));
             read_size = recvfrom(s, client_buff, RECV_BUFF_SIZE-1, 0, (struct sockaddr *)&client, &slen);
             //printf("%s\n", client_buff);
@@ -523,9 +525,7 @@ int main(int argc , char *argv[])
             }
 
             //Parse the message
-            char pidfa[RECV_BUFF_SIZE];
             pidfa[0] = 0x00;
-            char pexpire[RECV_BUFF_SIZE];
             pexpire[0] = 0x00;
             parseMsg(client_buff, pidfa, pexpire);
             if(pidfa[0] == 0x00)
