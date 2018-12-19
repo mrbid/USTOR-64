@@ -158,8 +158,8 @@ void timestamp()
 //Impressions are split into site domain buckets
 struct site //8 bytes, no padding.
 {
-    short idfa_high;
-    short idfa_low;
+    unsigned short idfa_high;
+    unsigned short idfa_low;
     uint expire_epoch;
 };
 
@@ -204,7 +204,7 @@ int has_idfa(const uint64_t idfa) //Pub
     }
 
     //Set the ranges
-    short idfar = (idfa % (sizeof(short)-1))+1;
+    unsigned short idfar = (idfa % (sizeof(unsigned short)-1))+1;
     if(idfar >= sites[site_index].idfa_low && idfar <= sites[site_index].idfa_high)
     {
         rejected++;
@@ -240,7 +240,7 @@ void add_idfa(const uint64_t idfa, const uint expire_seconds) //Pub
         collisions++;
 
     //Set the ranges
-    short idfar = (idfa % (sizeof(short)-1))+1;
+    unsigned short idfar = (idfa % (sizeof(unsigned short)-1))+1;
     if(idfar < sites[site_index].idfa_low || sites[site_index].idfa_low == 0)
     {
         sites[site_index].idfa_low = idfar;
