@@ -203,7 +203,7 @@ int has_idfa(const uint64_t idfa) //Pub
         //fprintf(stderr, "%i: reached it's expirary after %u hours.\n", cid_index, ((time(0) - campaigns[cid_index].sites[site_index].last_epoch) / 60) / 60 );
     }
 
-    //Set the ranges
+    //Check the ranges
     unsigned short idfar = (idfa % (sizeof(unsigned short)-1))+1;
     if(idfar >= sites[site_index].idfa_low && idfar <= sites[site_index].idfa_high)
     {
