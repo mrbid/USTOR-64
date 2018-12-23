@@ -214,8 +214,8 @@ int has_idfa(const uint64_t idfa) //Pub
     //Stats
     allowed++;
 
-    //add_idfa_priv(site_index, idfa); //No idfa? Add it
-    return 0; //NO IFDA :(
+    //NO IFDA
+    return 0;
 }
 
 //Set's ifa,
