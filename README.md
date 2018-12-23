@@ -62,7 +62,7 @@ function check_ustor($idfa)
         if($r != FALSE && $r[0] == 'n')
         {
             fclose($fp);
-            return FALSE; //The only time we can bid, is if the server 'says-so'
+            return FALSE;
         }
         fclose($fp);
         return TRUE;
