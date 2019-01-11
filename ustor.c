@@ -109,7 +109,6 @@ function check_ustor($idfa)
 #include <stdlib.h> //atoi()
 #include <time.h> //time()
 #include <signal.h> //SIGPIPE
-#include <netdb.h> //hostent
 #include <sys/sysinfo.h> //CPU cores
 #include <pthread.h> //Threading
 #include <unistd.h> //Sleep
@@ -155,7 +154,6 @@ void timestamp()
 . ~ Unique Capping Code
 */
 
-//Impressions are split into site domain buckets
 struct site //8 bytes, no padding.
 {
     unsigned short idfa_high;
