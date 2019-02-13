@@ -6,10 +6,10 @@
 
 Performance; READ O(1) - WRITE O(1) prime number hash map using CRC64.
 
-This version of USTOR uses the UDP protocol for maximum QPS, a hash map
-using a prime number, a simple bucketing system that is adequate enough
-for the purpose of dealing with hash collisions in the application of
-unique filtering and, as expected, cache efficient pre-allocated memory.
+This version of USTOR uses the UDP protocol for maximum throughput,
+a hash map using a prime number, a simple bucketing system that is
+adequate enough for the purpose of dealing with hash collisions
+and cache efficient pre-allocated memory.
 
 POSIX Threads are used to thread the Read operations, on a separate
 port with port sharing enabled. (port 7811)
