@@ -184,7 +184,7 @@ void init_sites()
     }
 }
 
-//Check against all idfa in memory for a match, if it's not there, add it,
+//Check against all idfa in memory for a match
 int has_idfa(const uint64_t idfa) //Pub
 {
     //Find site index
@@ -216,7 +216,7 @@ int has_idfa(const uint64_t idfa) //Pub
     return 0;
 }
 
-//Set's ifa,
+//Set's idfa,
 void add_idfa(const uint64_t idfa, const uint expire_seconds) //Pub
 {
     //Find site index
@@ -411,7 +411,7 @@ void *readThread(void *arg)
     return 0;
 }
 
-//Main process for writing (you could also read, but there's no point unless your going single threaded)
+//This main process is reserved for writing, but capable of reading.
 int main(int argc , char *argv[])
 {
     //Init memory for unique filtering
