@@ -62,7 +62,7 @@ function check_ustor($idfa)
         if($r != FALSE && $r[0] == 'n')
         {
             fclose($fp);
-            return FALSE; //FASLE = Not Stored, You can bid.
+            return FALSE; //FALSE = Not Stored, You can bid.
         }
         fclose($fp);
         return TRUE;
