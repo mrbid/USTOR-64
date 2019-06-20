@@ -20,7 +20,7 @@ By default 433,033,301 *(433 Million)* impressions can be recorded not including
 The current configuration uses ~3.2 GB of memory.
 
 
-#### PHP Functions for Write and Check operations
+### PHP Functions for Write and Check operations
 
 ```
 function add_ustor($userid, $expire_seconds)
@@ -63,7 +63,7 @@ function check_ustor($userid)
 }
 ```
 
-#### Licence
+### Licence
 ````
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 This program is free software: you can redistribute it and/or modify
