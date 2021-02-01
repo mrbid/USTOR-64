@@ -31,9 +31,9 @@
     POSIX Threads are used to thread the Read operations, on a separate
     port with port sharing enabled. (port 7811)
 
-    Write operations are single threaded. (port 7810)
+    Write operations are single-threaded. (port 7810)
 
-    SHA1 is used in the php code to hash the idfa before it is sent to
+    SHA1 is used in the PHP code to hash the IDFA before it is sent to
     the USTOR daemon, once it arrives it is hashed using the CRC64
     algorithm from Redis. Then it is added to the hashmap.
 
