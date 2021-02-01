@@ -11,11 +11,11 @@ and cache efficient pre-allocated memory.
 
 **Read** operations are on UDP port 7811.
 
-**Write** operations are single threaded on port 7810.
+**Write** operations are single-threaded on port 7810.
 
-SHA1 is used in the php code to hash the userid before it is sent to the USTOR daemon, once it arrives it is hashed a second time  into a CRC64 index for the HashMap.
+SHA1 is used in the PHP code to hash the userid before it is sent to the USTOR daemon, once it arrives it is hashed a second time into a CRC64 index for the HashMap.
 
-By default 433,033,301 *(433 Million)* impressions can be recorded not including collisions. Ccollisions are range blocked using two short integers to make the whole struct a total size of 8 bytes.
+By default 433,033,301 *(433 Million)* impressions can be recorded not including collisions. Collisions are range blocked using two short integers to make the whole struct a total size of 8 bytes.
 
 The current configuration uses ~3.2 GB of memory.
 
